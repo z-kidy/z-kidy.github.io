@@ -1,0 +1,23 @@
+markdown: kramdown
+highlighter: pygments
+permalink: blog/:year/:month/:day/:title.html
+paginate: 6
+paginate_path: page/:num
+
+blog:
+    name: z-kidy                                               # 博客名称
+    description: 有机会我把我的故事讲给你听                                        # 博客描述
+    title: 风一样的男子的blog                                              # 网页标题
+    url:                                                 # 博客地址
+    duoshuo:                                             # 多说ID
+    tongji:                                              # 百度统计ID
+    qiniu:                                               # 七牛云地址
+author:
+    name:  z-kidy                                              # 作者名称
+    email:  zjindiss@gmail.com                                            # 邮箱地址
+    weibo:  zjindiss@gmail.com                                           # 微博地址
+    github: https://github.com/z-kidy                                             # GitHub地址
+    logo:  http://b37.photo.store.qq.com/psu?/6d8808b1-b660-4787-ba0c-f383e5db36d5/IGkf.v11Mv0dDTtpYPtXMxSwVK1ew2kmJbrx1VJC2BE!/b/YYiXIRbjsQAAYtceIxZGrwAA&bo=kADiAAAAAAABA1Y!&rf=viewer_4                       # logo地址
+    douban:
+        name:                                            # 豆瓣地址名称
+        key:                                             # 豆瓣API Key

@@ -1,0 +1,268 @@
+---
+layout: post
+title: 如何使用github搭建个人blog
+category: jekyll
+---
+
+
+	<p><strong>二、Jekyll是什么？</strong></p>
+
+	<p><strong><a href="http://jekyllrb.com/">Jekyll</a>（发音/'dʒiːk əl/，"杰克尔"）是一个静态站点生成器，它会根据网页源码生成静态文件。</strong>它提供了模板、变量、插件等功能，所以实际上可以用来编写整个网站。</p>
+
+	<p><img src="http://image.beekka.com/blog/201208/bg2012082505.jpg" /></p>
+
+	<p><strong>整个思路到这里就很明显了。你先在本地编写符合Jekyll规范的网站源码，然后上传到github，由github生成并托管整个网站。</strong></p>
+
+	<p>这种做法的好处是：</p>
+
+	<blockquote>
+
+	<p>　　* 免费，无限流量。</p>
+
+	<p>　　* 享受git的版本管理功能，不用担心文章遗失。</p>
+
+	<p>　　* 你只要用自己喜欢的编辑器写文章就可以了，其他事情一概不用操心，都由github处理。</p>
+
+	</blockquote>
+
+	<p>它的缺点是：</p>
+
+	<blockquote>
+
+	<p>　　* 有一定技术门槛，你必须要懂一点git和网页开发。</p>
+
+	<p>　　* 它生成的是静态网页，添加动态功能必须使用外部服务，比如评论功能就只能用<a href="http://disqus.com/">disqus</a>。</p>
+
+	<p>　　* 它不适合大型网站，因为没有用到数据库，每运行一次都必须遍历全部的文本文件，网站越大，生成时间越长。</p>
+
+	</blockquote>
+
+	<p>但是，综合来看，它不失为搭建中小型Blog或项目主页的最佳选项之一。</p>
+
+	<p><strong>三、一个实例</strong></p>
+
+	<p>下面，我举一个实例，演示如何在github上搭建blog，你可以跟着一步步做。为了便于理解，这个blog只有最基本的功能。</p>
+
+	<p>在搭建之前，你必须已经安装了<a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">git</a>，并且有<a href="https://github.com/">github</a>账户。</p>
+
+	<p><strong>第一步，创建项目。</strong></p>
+
+	<p>在你的电脑上，建立一个目录，作为项目的主目录。我们假定，它的名称为jekyll_demo。</p>
+
+	<blockquote>
+
+	<p>　　$ mkdir jekyll_demo</p>
+
+	</blockquote>
+
+	<p>对该目录进行git初始化。</p>
+
+	<blockquote>
+
+	<p>　　$ cd jekyll_demo</p>
+
+	<p>　　$ git init</p>
+
+	</blockquote>
+
+	<p>然后，创建一个没有父节点的分支gh-pages。因为github规定，只有该分支中的页面，才会生成网页文件。</p>
+
+	<blockquote>
+
+	<p>　　$ git checkout --orphan gh-pages</p>
+
+	</blockquote>
+
+	<p>以下所有动作，都在该分支下完成。</p>
+
+	<p><strong>第二步，创建设置文件。</strong></p>
+
+	<p>在项目根目录下，建立一个名为_config.yml的文本文件。它是jekyll的设置文件，我们在里面填入如下内容，其他设置都可以用默认选项，具体解释参见<a href="https://github.com/mojombo/jekyll/wiki/Configuration">官方网页</a>。</p>
+
+	<blockquote>
+
+	<p>　　baseurl:  /jekyll_demo</p>
+
+	</blockquote>
+
+	<p>目录结构变成：</p>
+
+	<blockquote>
+
+	<p>　　/jekyll_demo<br />
+	　　　　|--　_config.yml</p>
+
+	</blockquote>
+
+	<p><strong>第三步，创建模板文件。</strong></p>
+
+	<p>在项目根目录下，创建一个_layouts目录，用于存放模板文件。</p>
+
+	<blockquote>
+
+	<p>　　$ mkdir _layouts</p>
+
+	</blockquote>
+
+	<p>进入该目录，创建一个default.html文件，作为Blog的默认模板。并在该文件中填入以下内容。</p>
+
+	<blockquote>
+
+	<p>　　&lt;!DOCTYPE html&gt;</p>
+
+	<p>　　&lt;html&gt;</p>
+
+	<p>　　&lt;head&gt;</p>
+
+	<p>　　　　&lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;</p>
+
+	<p>　　　　&lt;title&gt;{{ page.title }}&lt;/title&gt;</p>
+
+	<p>　　&lt;/head&gt;</p>
+
+	<p>　　&lt;body&gt;<br />
+	 <br />
+	　　　　{{ content }}<br />
+	  <br />
+	　　&lt;/body&gt;</p>
+
+	<p>　　&lt;/html&gt;</p>
+
+	</blockquote>
+
+	<p>Jekyll使用<a href="https://github.com/shopify/liquid/wiki/liquid-for-designers">Liquid模板语言</a>，{{ page.title }}表示文章标题，{{ content }}表示文章内容，更多模板变量请参考<a href="https://github.com/mojombo/jekyll/wiki/Template-Data">官方文档</a>。</p>
+
+	<p>目录结构变成：</p>
+
+	<blockquote>
+
+	<p>　　/jekyll_demo<br />
+	　　　　|--　_config.yml<br />
+	　　　　|--　_layouts<br />
+	　　　　|　　　|--　default.html </p>
+
+	</blockquote>
+
+	<p><strong>第四步，创建文章。</strong></p>
+
+	<p>回到项目根目录，创建一个_posts目录，用于存放blog文章。</p>
+
+	<blockquote>
+
+	<p>　　$ mkdir _posts</p>
+
+	</blockquote>
+
+	<p>进入该目录，创建第一篇文章。文章就是普通的文本文件，文件名假定为2012-08-25-hello-world.html。(注意，文件名必须为"年-月-日-文章标题.后缀名"的格式。如果网页代码采用html格式，后缀名为html；如果采用<a href="http://daringfireball.net/projects/markdown/">markdown</a>格式，后缀名为md。）</p>
+
+	<p>在该文件中，填入以下内容：（注意，行首不能有空格）</p>
+
+	<blockquote>
+
+	<p>　　---<br />
+	　　layout: default<br />
+	　　title: 你好，世界<br />
+	　　---</p>
+
+	<p>　　&lt;h2&gt;{{ page.title }}&lt;/h2&gt;</p>
+
+	<p>　　&lt;p&gt;我的第一篇文章&lt;/p&gt;</p>
+
+	<p>　　&lt;p&gt;{{ page.date | date_to_string }}&lt;/p&gt;</p>
+
+	</blockquote>
+
+	<p>每篇文章的头部，必须有一个<a href="https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter">yaml文件头</a>，用来设置一些元数据。它用三根短划线"---"，标记开始和结束，里面每一行设置一种元数据。"layout:default"，表示该文章的模板使用_layouts目录下的default.html文件；"title: 你好，世界"，表示该文章的标题是"你好，世界"，如果不设置这个值，默认使用嵌入文件名的标题，即"hello world"。</p>
+
+	<p>在yaml文件头后面，就是文章的正式内容，里面可以使用模板变量。{{ page.title }}就是文件头中设置的"你好，世界"，{{ page.date   }}则是嵌入文件名的日期（也可以在文件头重新定义date变量），"| date_to_string"表示将page.date变量转化成人类可读的格式。</p>
+
+	<p>目录结构变成：</p>
+
+	<blockquote>
+
+	<p>　　/jekyll_demo<br />
+	　　　　|--　_config.yml<br />
+	　　　　|--　_layouts<br />
+	　　　　|　　　|--　default.html <br />
+	　　　　|--　_posts<br />
+	　　　　|　　　|--　2012-08-25-hello-world.html</p>
+
+	</blockquote>
+
+	<p><strong>第五步，创建首页。</strong></p>
+
+	<p>有了文章以后，还需要有一个首页。</p>
+
+	<p>回到根目录，创建一个index.html文件，填入以下内容。</p>
+
+	<blockquote>
+
+	<p>　　---<br />
+	　　layout: default<br />
+	　　title: 我的Blog<br />
+	　　---</p>
+
+	<p>　　&lt;h2&gt;{{ page.title }}&lt;/h2&gt;</p>
+
+	<p>　　&lt;p&gt;最新文章&lt;/p&gt;</p>
+
+	<p>　　&lt;ul&gt;</p>
+
+	<p>　　　　{% for post in site.posts %}  </p>
+
+	<p>　　　　　　&lt;li&gt;{{ post.date | date_to_string }} &lt;a href="{{ site.baseurl }}{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;</p>
+
+	<p>　　　　{% endfor %}</p>
+
+	<p>　　&lt;/ul&gt;</p>
+
+	</blockquote>
+
+	<p>它的Yaml文件头表示，首页使用default模板，标题为"我的Blog"。然后，首页使用了{% for post in site.posts %}，表示对所有帖子进行一个遍历。这里要注意的是，Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。至于{{site.baseurl}}就是_config.yml中设置的baseurl变量。</p>
+
+	<p>目录结构变成：</p>
+
+	<blockquote>
+
+	<p>　　/jekyll_demo<br />
+	　　　　|--　_config.yml<br />
+	　　　　|--　_layouts<br />
+	　　　　|　　　|--　default.html <br />
+	　　　　|--　_posts<br />
+	　　　　|　　　|--　2012-08-25-hello-world.html<br />
+	　　　　|--　index.html</p>
+
+	</blockquote>
+
+	<p><strong>第六步，发布内容。</strong></p>
+
+	<p>现在，这个简单的Blog就可以发布了。先把所有内容加入本地git库。</p>
+
+	<blockquote>
+
+	<p>　　$ git add .</p>
+
+	<p>　　$ git commit -m "first post"</p>
+
+	</blockquote>
+
+	<p>然后，前往github的网站，在网站上创建一个名为jekyll_demo的库。接着，再将本地内容推送到github上你刚创建的库。注意，下面命令中的username，要替换成你的username。</p>
+
+	<blockquote>
+
+	<p>　　$ git remote add origin https://github.com/<strong>username</strong>/jekyll_demo.git</p>
+
+	<p>　　$ git push origin gh-pages</p>
+
+	</blockquote>
+
+	<p>上传成功之后，等10分钟左右，访问<strong>http://username.github.com/jekyll_demo/</strong>就可以看到Blog已经生成了（将username换成你的用户名）。</p>
+
+	<p>首页：</p>
+
+	<p><img src="http://image.beekka.com/blog/201208/bg2012082506.jpg" /></p>
+
+	<p>文章页面：</p>
+
+	<p><img src="http://image.beekka.com/blog/201208/bg2012082507.jpg" /></p>
+
