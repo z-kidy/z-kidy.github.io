@@ -1,0 +1,1417 @@
+---
+layout: post
+title: 罗列html中所有的特殊字符
+category: html
+---
+<h2>HTML字符实体(Character Entities)</h2>
+<pre>有些字符在HTML里有特别的含义，比如小于号&lt;就表示HTML Tag的开始，这个小于号是不显示在我们最终看到的网页里的。那如果我们希望在网页中显示一个小于号，该怎么办呢？
+这就要说到HTML字符实体(HTML Character Entities)了。
+一个字符实体(Character Entity)分成三部分：第一部分是一个&amp;符号，英文叫ampersand；第二部分是实体(Entity)名字或者是#加上实体(Entity)编号；第三部分是一个分号。
+比如，要显示小于号，就可以写&lt;或者&#60;。
+用实体(Entity)名字的好处是比较好理解，一看lt，大概就猜出是less than的意思，但是其劣势在于并不是所有的浏览器都支持最新的Entity名字。而实体(Entity)编号，各种浏览器都能处理。
+注意：Entity是区分大小写的。
+</pre>
+
+<h2>一些常用的特殊字符的引用<h2>
+<table style="padding: 0px; border: 0px; margin: 5px 5px 5px 14px; font-size: 11px; font-family: Verdana, Arial, serif; background-color: rgb(150, 249, 249);">
+<tbody>	
+	<tr class="header">
+	<td style="background-color: rgb(192, 192, 192); padding: 2px 5px; font-weight: bold;">字符</td>
+	<td style="background-color: rgb(192, 192, 192); padding: 2px 5px; font-weight: bold;">十进制字符编号</td>
+	<td style="background-color: rgb(192, 192, 192); padding: 2px 5px; font-weight: bold;">实体名字</td>
+	<td style="background-color: rgb(192, 192, 192); padding: 2px 5px; font-weight: bold;">说明</td>
+	</tr>
+
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&nbsp;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#160;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;nbsp;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">空格Nonbreaking space</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#38;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;amp;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Ampersand</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&quot;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#34;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;quot;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">双引号Quotation mark</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&lt;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#60;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;lt;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小于号Less than</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&gt;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#62;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;gt;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大于号Greater than</td>
+	</tr>
+
+<tbody>
+</table>
+
+
+<br />
+
+
+<h2>字符实体(Character Entities)</h2>
+<table style="padding: 0px; border: 0px; margin: 5px 5px 5px 14px; font-size: 11px; font-family: Verdana, Arial, serif; background-color: rgb(249, 249, 249);">
+<tbody>
+	<tr class="header">
+	<td style="background-color: rgb(192, 192, 192); padding: 2px 5px; font-weight: bold;">字符</td>
+	<td style="background-color: rgb(192, 192, 192); padding: 2px 5px; font-weight: bold;">十进制字符编号</td>
+	<td style="background-color: rgb(192, 192, 192); padding: 2px 5px; font-weight: bold;">实体名字</td>
+	<td style="background-color: rgb(192, 192, 192); padding: 2px 5px; font-weight: bold;">说明</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#00;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#01;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#02;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#03;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#04;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#05;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#06;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#07;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#08;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#09;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">制表符Horizontal tab</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#10;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">换行Line feed</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#11;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#12;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#13;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">回车Carriage Return</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#14;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#15;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#16;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#17;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#18;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#19;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#20;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#21;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#22;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#23;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#24;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#25;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#26;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#27;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#28;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#29;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#30;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#31;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&nbsp;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#32;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Space</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">!</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#33;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">惊叹号Exclamation mark</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&quot;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#34;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;quot;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">双引号Quotation mark</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">#</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#35;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">数字标志Number sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">$</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#36;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">美元标志Dollar sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">%</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#37;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">百分号Percent sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#38;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;amp;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Ampersand</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&#39;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#39;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">单引号Apostrophe</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">(</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#40;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小括号左边部分Left parenthesis</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">)</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#41;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小括号右边部分Right parenthesis</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">*</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#42;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">星号Asterisk</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">+</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#43;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">加号Plus sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">,</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#44;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">逗号Comma</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">-</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#45;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">连字号Hyphen</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">.</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#46;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">句号Period (fullstop)</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">/</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#47;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">斜杠Solidus (slash)</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">0</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#48;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">数字0 Digit 0</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">1</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#49;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">数字1 Digit 1</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">2</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#50;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">数字2 Digit 2</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">3</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#51;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">数字3 Digit 3</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">4</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#52;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">数字4 Digit 4</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">5</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#53;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">数字5 Digit 5</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">6</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#54;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">数字6 Digit 6</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">7</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#55;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">数字7 Digit 7</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">8</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#56;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">数字8 Digit 8</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">9</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#57;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">数字9 Digit 9</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">:</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#58;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">冒号Colon</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#59;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">分号Semicolon</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&lt;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#60;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;lt;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小于号Less than</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">=</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#61;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">等于符号Equals sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&gt;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#62;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;gt;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大于号Greater than</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">?</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#63;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">问号Question mark</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">@</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#64;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Commercial at</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">A</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#65;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写A Capital A</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">B</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#66;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写B Capital B</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">C</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#67;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写C Capital C</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">D</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#68;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写D Capital D</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">E</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#69;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写E Capital E</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">F</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#70;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写F Capital F</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">G</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#71;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写G Capital G</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">H</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#72;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写H Capital H</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">I</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#73;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写J Capital I</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">J</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#74;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写K Capital J</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">K</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#75;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写L Capital K</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">L</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#76;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写K Capital L</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">M</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#77;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写M Capital M</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">N</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#78;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写N Capital N</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">O</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#79;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写O Capital O</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">P</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#80;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写P Capital P</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Q</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#81;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写Q Capital Q</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">R</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#82;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写R Capital R</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">S</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#83;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写S Capital S</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">T</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#84;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写T Capital T</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">U</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#85;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写U Capital U</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">V</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#86;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写V Capital V</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">W</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#87;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写W Capital W</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">X</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#88;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写X Capital X</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Y</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#89;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写Y Capital Y</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Z</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#90;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大写Z Capital Z</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">[</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#91;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">中括号左边部分Left square bracket</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">\</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#92;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">反斜杠Reverse solidus (backslash)</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">]</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#93;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">中括号右边部分Right square bracket</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">^</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#94;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Caret</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">_</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#95;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">下划线Horizontal bar (underscore)</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">`</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#96;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">尖重音符Acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">a</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#97;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写a Small a</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">b</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#98;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写b Small b</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">c</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#99;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写c Small c</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">d</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#100;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写d Small d</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">e</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#101;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写e Small e</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">f</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#102;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写f Small f</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">g</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#103;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写g Small g</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">h</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#104;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写h Small h</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">i</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#105;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写i Small i</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">j</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#106;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写j Small j</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">k</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#107;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写k Small k</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">l</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#108;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写l Small l</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">m</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#109;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写m Small m</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">n</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#110;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写n Small n</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">o</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#111;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写o Small o</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">p</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#112;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写p Small p</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">q</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#113;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写q Small q</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">r</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#114;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写r Small r</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">s</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#115;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写s Small s</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">t</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#116;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写t Small t</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">u</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#117;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写u Small u</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">v</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#118;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写v Small v</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">w</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#119;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写w Small w</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">x</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#120;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写x Small x</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">y</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#121;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写y Small y</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">z</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#122;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">小写z Small z</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">{</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#123;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大括号左边部分Left curly brace</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">|</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#124;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">竖线Vertical bar</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">}</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#125;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">大括号右边部分Right curly brace</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">~</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#126;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Tilde</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#127;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">---</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">未使用Unused</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&nbsp;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#160;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;nbsp;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">空格Nonbreaking space</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&iexcl;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#161;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;iexcl;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Inverted exclamation</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&cent;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#162;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;cent;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">货币分标志Cent sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&pound;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#163;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;pound;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">英镑标志Pound sterling</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&curren;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#164;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;curren;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">通用货币标志General currency sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&yen;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#165;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;yen;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">日元标志Yen sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&brvbar;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#166;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;brvbar; or &amp;brkbar;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">断竖线Broken vertical bar</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&sect;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#167;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;sect;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">分节号Section sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&uml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#168;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;uml; or &amp;die;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">变音符号Umlaut</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&copy;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#169;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;copy;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">版权标志Copyright</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&ordf;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#170;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;ordf;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Feminine ordinal</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&laquo;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#171;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;laquo;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Left angle quote, guillemet left</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&not;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#172;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;not</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Not sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&nbsp;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#173;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;shy;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Soft hyphen</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&reg;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#174;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;reg;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">注册商标标志Registered trademark</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&macr;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#175;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;macr; or &amp;hibar;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">长音符号Macron accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&deg;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#176;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;deg;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">度数标志Degree sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&plusmn;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#177;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;plusmn;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">加或减Plus or minus</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&sup2;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#178;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;sup2;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">上标2 Superscript two</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&sup3;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#179;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;sup3;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">上标3 Superscript three</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&acute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#180;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;acute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">尖重音符Acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&micro;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#181;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;micro;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Micro sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&para;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#182;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;para;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Paragraph sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&middot;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#183;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;middot;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Middle dot</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&cedil;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#184;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;cedil;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Cedilla</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&sup1;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#185;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;sup1;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">上标1 Superscript one</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&ordm;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#186;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;ordm;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Masculine ordinal</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&raquo;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#187;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;raquo;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Right angle quote, guillemet right</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&frac14;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#188;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;frac14;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">四分之一Fraction one-fourth</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&frac12;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#189;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;frac12;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">二分之一Fraction one-half</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&frac34;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#190;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;frac34;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">四分之三Fraction three-fourths</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&iquest;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#191;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;iquest;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Inverted question mark</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Agrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#192;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Agrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital A, grave accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Aacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#193;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Aacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital A, acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Acirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#194;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Acirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital A, circumflex</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Atilde;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#195;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Atilde;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital A, tilde</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Auml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#196;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Auml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital A, di?esis / umlaut</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Aring;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#197;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Aring;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital A, ring</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&AElig;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#198;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;AElig;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital AE ligature</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Ccedil;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#199;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Ccedil;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital C, cedilla</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Egrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#200;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Egrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital E, grave accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Eacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#201;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Eacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital E, acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Ecirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#202;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Ecirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital E, circumflex</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Euml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#203;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Euml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital E, di?esis / umlaut</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Igrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#204;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Igrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital I, grave accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Iacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#205;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Iacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital I, acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Icirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#206;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Icirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital I, circumflex</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Iuml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#207;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Iuml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital I, di?esis / umlaut</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&ETH;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#208;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;ETH;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital Eth, Icelandic</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Ntilde;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#209;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Ntilde;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital N, tilde</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Ograve;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#210;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Ograve;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital O, grave accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Oacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#211;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Oacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital O, acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Ocirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#212;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Ocirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital O, circumflex</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Otilde;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#213;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Otilde;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital O, tilde</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Ouml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#214;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Ouml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital O, di?esis / umlaut</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&times;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#215;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;times;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">乘号Multiply sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Oslash;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#216;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Oslash;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital O, slash</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Ugrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#217;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Ugrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital U, grave accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Uacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#218;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Uacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital U, acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Ucirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#219;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Ucirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital U, circumflex</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Uuml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#220;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Uuml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital U, di?esis / umlaut</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&Yacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#221;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;Yacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital Y, acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&THORN;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#222;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;THORN;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Capital Thorn, Icelandic</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&szlig;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#223;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;szlig;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small sharp s, German sz</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&agrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#224;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;agrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small a, grave accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&aacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#225;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;aacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small a, acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&acirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#226;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;acirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small a, circumflex</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&atilde;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#227;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;atilde;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small a, tilde</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&auml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#228;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;auml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small a, di?esis / umlaut</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&aring;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#229;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;aring;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small a, ring</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&aelig;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#230;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;aelig;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small ae ligature</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&ccedil;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#231;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;ccedil;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small c, cedilla</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&egrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#232;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;egrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small e, grave accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&eacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#233;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;eacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small e, acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&ecirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#234;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;ecirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small e, circumflex</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&euml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#235;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;euml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small e, di?esis / umlaut</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&igrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#236;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;igrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small i, grave accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&iacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#237;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;iacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small i, acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&icirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#238;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;icirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small i, circumflex</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&iuml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#239;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;iuml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small i, di?esis / umlaut</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&eth;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#240;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;eth;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small eth, Icelandic</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&ntilde;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#241;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;ntilde;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small n, tilde</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&ograve;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#242;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;ograve;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small o, grave accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&oacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#243;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;oacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small o, acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&ocirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#244;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;ocirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small o, circumflex</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&otilde;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#245;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;otilde;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small o, tilde</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&ouml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#246;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;ouml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small o, di?esis / umlaut</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&divide;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#247;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;divide;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">除号Division sign</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&oslash;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#248;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;oslash;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small o, slash</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&ugrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#249;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;ugrave;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small u, grave accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&uacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#250;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;uacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small u, acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&ucirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#251;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;ucirc;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small u, circumflex</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&uuml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#252;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;uuml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small u, di?esis / umlaut</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&yacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#253;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;yacute;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small y, acute accent</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&thorn;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#254;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;thorn;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small thorn, Icelandic</td>
+	</tr>
+	<tr>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&yuml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;#255;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">&amp;yuml;</td>
+	<td style="background-color: rgb(232, 232, 232); padding: 2px 5px;">Small y, umlaut</td>
+	</tr>
+</tbody>
+</table>
