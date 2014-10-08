@@ -2,9 +2,9 @@
 这是一款Jekyll博客主题，叫做Jekyll Light
 参考[pexcn的博客](http://pexcn.tk/blog/2014/09/04/Jekyll-Light.html)
 
-发现gitcafe也支持jeckyll，操作也基本与github一样，据说速度更快。
-而且支持国产嘛，所以博客移到了gitcafe上
-域名目前是z-kidy.gitcafe.com
++ 发现gitcafe也支持jeckyll，操作也基本与github一样，据说速度更快。
++ 而且支持国产嘛，所以博客移到了gitcafe上
++ 域名目前是z-kidy.gitcafe.com
 ### 关于主题
 * 支持多说评论框
 * 支持百度统计
