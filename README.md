@@ -1,8 +1,6 @@
 ## 简介
-
-这是一款Jekyll博客主题，叫做Jekyll Light。这是我花了两天时间才重新做好的主题。没有用到任何CSS框架，简洁美观。  
-PS: 应该说我不会用CSS框架。。。
-
+这是一款Jekyll博客主题，叫做Jekyll Light
+参考[pexcn的博客](http://pexcn.tk/blog/2014/09/04/Jekyll-Light.html)
 ### 关于主题
 * 支持多说评论框
 * 支持百度统计
