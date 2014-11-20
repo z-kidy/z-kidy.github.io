@@ -1,11 +1,11 @@
 ## 简介
 这是一款Jekyll博客主题，叫做Jekyll Light
 参考[pexcn的博客](http://pexcn.tk/blog/2014/09/04/Jekyll-Light.html)
+***我的博客现在搭在gitcafe上，地址 [zhangkidy.com](zhangkidy.com)
 
 + 发现gitcafe也支持jeckyll，操作也基本与github一样，据说速度更快。
 + 而且支持国产嘛，所以博客移到了gitcafe上
 + 域名目前是z-kidy.gitcafe.com
-### 关于主题
 * 支持多说评论框
 * 支持百度统计
 * 支持FancyBox图片盒子
