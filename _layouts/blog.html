@@ -15,7 +15,7 @@
   <script src="/res/js/light.js"></script>
   {% include tongji.html %}
 </head>
-<body>
+<body onload="prettyPrint()">
   <div id="blog">
     {% include sidebar.html %}
     <div class="main">
@@ -25,5 +25,19 @@
   </div>    
   <div id="top"><a id="rocket" href="javascript:;" title="返回顶部"><i></i></a></div>
   {% if page.math == true %}<script src="http://cdn.bootcss.com/mathjax/2.4.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>MathJax.Hub.Config({tex2jax:{inlineMath: [['\\','\\']],displayMath: [['$$','$$']]}});</script>{% endif %}
-</body>
+
+  <!-- <script src="/run_prettify.js"></script>
+  <script src="http://www.qingdou.me/wp-content/themes/qingdou/js/jquery.js?ver=2.1" type="text/javascript"></script>
+  <script src="http://www.qingdou.me/wp-content/themes/qingdou/js/jquery.ias.min.js"></script>
+  <script src="http://www.qingdou.me/wp-content/themes/qingdou/js/prettify.js?ver=2.1" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    $(function() {
+            $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto');
+            window.prettyPrint && prettyPrint();
+    });
+  </script>-->
+  <script src="http://libs.baidu.com/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+  <script src="http://www.jquery001.com/js/prettify.js" type="text/javascript"></script>
+  </body>
 </html>
