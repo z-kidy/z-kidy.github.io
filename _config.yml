@@ -5,11 +5,13 @@ paginate: 6
 paginate_path: page/:num
 
 blog:
-    name: kidy's bolg                                               # 博客名称
-    description: 有机会我把我的故事讲给你听                                        # 博客描述
-    title: 爱旅行的程序狗小文青                                              # 网页标题
-    url:                                                 # 博客地址
-    duoshuo:                                             # 多说ID
+    name: kidy's bolg                                    # 博客名称
+    description: 有机会我把我的故事讲给你听                   # 博客描述
+    title: 爱旅行的程序狗小文青                              # 网页标题
+    url:   /                                             # 博客地址
+    top_img: /res/img/P1080753.jpg                       # 博客顶部的图片
+    bottom_img: /res/img/P1080499.jpg
+    duoshuo:                                             # 多说ID,自己规定的二级
     tongji:                                              # 百度统计ID
     qiniu:                                               # 七牛云地址
 author:

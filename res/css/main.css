@@ -1,0 +1,36 @@
+
+.logo{
+	margin-top: 30px;
+	margin-bottom: 80px;
+}
+
+p > img{
+
+}
+
+.k-card-title{
+	font-size: 40px;
+	line-height: 70px;
+}
+
+div.card-content > h2{
+	font-size: 2rem;
+}
+
+div.card-content > h3{
+	font-size: 1.7rem;
+}
+
+div.card-content > h4{
+	font-size: 1.3rem;
+}
+
+.parallax-container {
+   height: 300px;
+ }
+
+#k-footer{
+	font-weight: 500;
+	background-color: #f5f5f5;
+	text-align: center;
+}

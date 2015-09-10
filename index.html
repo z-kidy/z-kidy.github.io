@@ -4,25 +4,23 @@ index: true
 ---
 
 {% for post in paginator.posts %}
-<div class="posts">
-  <section class="post">
-    <header class="post-header">
-      <h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-      <p class="post-meta">
-        <i class="fa fa-calendar"></i>
-        {{ post.date | date: "%Y" }}年{{ post.date | date: "%m" }}月{{ post.date | date: "%d" }}日
-        <i class="space"></i>
-        <i class="fa fa-tags"></i>
-        <a class="post-category" href="/page/category.html#{{ post.categories }}">{{ post.categories }}</a>
-      </p>
-    </header>
-    <div class="post-main">
-      {{ post.content | split:'<!-- more -->'| first }}
-      <div class="readall"><a href="{{ post.url }}" id="post-readall">阅读全文&nbsp;<i class="fa fa-chevron-right"></i></a></div>
-    </div>
-  </section>
+
+<div class="card hoverable">
+
+  <div class="card-content">
+    <div class="k-card-title"><a href="{{ post.url }}">{{post.title}}</a></div>
+    <p>
+      {{ post.date | date: "%Y" }}年{{ post.date | date: "%m" }}月{{ post.date | date: "%d" }}日
+      <a class="post-category" href="/page/category.html#{{ post.categories }}">{{ post.categories }}</a>
+    </p>
+  {{ post.content | split:'<!-- more -->' | first }}
+  </div>
+  <div class="card-action"><a href="{{ post.url }}">阅读全文</a></div>
+  
 </div>
+
 {% endfor %}
+
 <div class="pagination">
   {% if paginator.previous_page %}
   {% if paginator.page == 2 %}

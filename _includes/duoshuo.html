@@ -1,4 +1,17 @@
-<div class="comments">
-  <div class="ds-thread" data-title="{{ page.title }}" data-thread-key="{{ page.id }}" data-url="{{ site.blog.url }}{{ page.url }}"></div>
-  <script type="text/javascript">var duoshuoQuery = {short_name:"{{ site.blog.duoshuo }}"};(function(){var ds = document.createElement('script');ds.type = 'text/javascript';ds.async = true;ds.src = '/res/js/embed.js';ds.charset = 'UTF-8';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);})();</script>
-</div>
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-title="{{ page.title }}" data-thread-key="{{ page.id }}" data-url="{{ site.blog.url }}{{ page.url }}"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"kidy"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
