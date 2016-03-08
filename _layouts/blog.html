@@ -10,29 +10,38 @@
   {% if page.index == true %}<link rel="canonical" href="{{ site.blog.url }}">{% else %}<link rel="canonical" href="{{ site.blog.url }}{{ page.url }}">{% endif %}
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="icon" type="image/gif" href="animated_favicon1.gif">
-
+  
+  <link rel="stylesheet" type="text/css" href="/res/css/public.css">
   <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
-  <link rel="stylesheet" type="text/css" href="res/css/main.css">
+  <link rel="stylesheet" href="/res/css/materialize.min.css">
+  <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+  <link rel="stylesheet" type="text/css" href="/res/css/main.css">
 
 </head>
 
 <body>
-  <nav class="white">
-    <div class="container">
-      <div class="nav-wrapper">
-
-        <ul id="slide-out" class="side-nav">
-          <li><a href="#">First</a></li>
-          <li><a href="#">Second</a></li>
-          <li><a href="#">Third</a></li>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse show-on-large">
-          <i class="mdi-navigation-menu black-text"></i>
+  <div class="slide-out-btn">
+    <ul id="slide-out" class="side-nav">
+      <div class="k-logo">
+        <a href="/">
+          <img src="{{ site.author.logo }}" class="k-circle responsive-img">
         </a>
       </div>
-    </div>
-  </nav>
+    {% for nav in site.data.nav %}
+      <li><a href="{{ nav.href }}"{% if nav.newblank == true %}target="_blank"{% endif %}><i class="{{ nav.icon }}"></i>&nbsp;{{ nav.title }}</a></li>
+    {% endfor%}
+
+      <a class="github" href="{{ site.author.github }}" title="GitHub" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+      <a class="rss" href="/page/feed.xml" title="RSS订阅" target="_blank"><i class="fa fa-rss"></i></a>
+    </ul>
+    
+
+    <a href="#" data-activates="slide-out" class="button-collapse show-on-large">
+      <i class="mdi-navigation-menu black-text"></i>
+    </a>
+
+  </div>
+
   
   <div class="parallax-container">
     <div class="parallax"><img src="{{ site.blog.top_img }}"></div>
@@ -46,8 +55,9 @@
 
   {% if page.index == true or page.post == true %}{% include footer.html %}{% endif %}
   
-<!-- <div id="top"><a id="rocket" href="javascript:;" title="返回顶部"><i></i></a></div>
-{% if page.math == true %}<script src="http://cdn.bootcss.com/mathjax/2.4.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>MathJax.Hub.Config({tex2jax:{inlineMath: [['\\','\\']],displayMath: [['$$','$$']]}});</script>{% endif %}  -->
+<div id="top"><a id="rocket" href="javascript:;" title="返回顶部"><i></i></a></div>
+<script src="/res/js/light.js"></script>
+{% if page.math == true %}<script src="http://cdn.bootcss.com/mathjax/2.4.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>MathJax.Hub.Config({tex2jax:{inlineMath: [['\\','\\']],displayMath: [['$$','$$']]}});</script>{% endif %} 
 
   <!-- <script src="/run_prettify.js"></script>
   <script src="http://www.qingdou.me/wp-content/themes/qingdou/js/jquery.js?ver=2.1" type="text/javascript"></script>
@@ -63,11 +73,17 @@
     <!-- Compiled and minified JavaScript -->
 <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+  <script src="/res/js/materialize.min.js"></script>
+
+  <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+  <script >hljs.initHighlightingOnLoad();</script>  
   <script type="text/javascript">
 
     // Initialize collapse button
-    $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav({
+      menuWidth: 300,
+      closeOnClick: true,
+    });
     // Initialize collapsible (uncomment the line below if you use the dropdown variation)
     $('.collapsible').collapsible();
     

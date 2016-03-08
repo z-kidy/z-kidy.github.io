@@ -1,3 +1,7 @@
+- href: /index.html
+  icon:  fa fa-eyedropper
+  title: 首页
+
 - href: /page/timing.html
   icon: fa fa-clock-o
   title: 时间轴
@@ -6,14 +10,6 @@
   icon: fa fa-tags
   title: 分类
 
-- href: /page/read.html
-  icon:  fa fa-book
-  title: 阅读
-
-- href: /life/index.html
-  icon: fa fa-eyedropper
-  title: 记录
-  newblank: true
 
 - href: /page/about.html
   icon: fa fa-paper-plane-o
