@@ -49,34 +49,32 @@
   
   <main>
     <div class="container">
+
     {{ content }}
     </div>
   </main>
 
   {% if page.index == true or page.post == true %}{% include footer.html %}{% endif %}
-  
+
+
+
+
+
+
 <div id="top"><a id="rocket" href="javascript:;" title="返回顶部"><i></i></a></div>
 <script src="/res/js/light.js"></script>
 {% if page.math == true %}<script src="http://cdn.bootcss.com/mathjax/2.4.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>MathJax.Hub.Config({tex2jax:{inlineMath: [['\\','\\']],displayMath: [['$$','$$']]}});</script>{% endif %} 
 
-  <!-- <script src="/run_prettify.js"></script>
-  <script src="http://www.qingdou.me/wp-content/themes/qingdou/js/jquery.js?ver=2.1" type="text/javascript"></script>
-  <script src="http://www.qingdou.me/wp-content/themes/qingdou/js/jquery.ias.min.js"></script>
-  <script src="http://www.qingdou.me/wp-content/themes/qingdou/js/prettify.js?ver=2.1" type="text/javascript"></script>
-  
-  <script type="text/javascript">
-    $(function() {
-            $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto');
-            window.prettyPrint && prettyPrint();
-    });
-  </script>-->
-    <!-- Compiled and minified JavaScript -->
+
 <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
   <script src="/res/js/materialize.min.js"></script>
 
   <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
-  <script >hljs.initHighlightingOnLoad();</script>  
+  <script >hljs.initHighlightingOnLoad();</script>
+
+  <script type="text/javascript" src="/res/js/toc.js"></script>
+
   <script type="text/javascript">
 
     // Initialize collapse button
@@ -91,7 +89,16 @@
       $('.parallax').parallax();
     });
     
-    
+
+    $(document).ready(function() {
+        $('#toc').toc({listType: 'ul',showEffect: 'slideDown'});
+    });
+
+
+    $(document).ready(function(){
+      $('.tabs-wrapper ').pushpin({ top: $('.tabs-wrapper').offset().top });
+    });
   </script>
+
 </body>
 </html>

@@ -1,6 +1,7 @@
 permalink: blog/:year/:month/:day/:title.html
 paginate: 6
 paginate_path: page/:num
+gems: [jekyll-paginate]
 
 blog:
     name: kidy's bolg                                    # 博客名称
