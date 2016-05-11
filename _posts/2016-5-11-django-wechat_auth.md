@@ -243,4 +243,4 @@ https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code
 
 ### 源码
 
-[](https://github.com/z-kidy/wechat_auth)
+[https://github.com/z-kidy/wechat_auth](https://github.com/z-kidy/wechat_auth)

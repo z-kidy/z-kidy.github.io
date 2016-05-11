@@ -19,15 +19,15 @@ p > img{
 	line-height: 70px;
 }
 
-div.card-content > h2{
+h2{
 	font-size: 2rem;
 }
 
-div.card-content > h3{
+h3{
 	font-size: 1.7rem;
 }
 
-div.card-content > h4{
+h4{
 	font-size: 1.3rem;
 }
 
